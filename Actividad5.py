@@ -17,6 +17,7 @@ def sumrow():
             res += matrix[x][y]
         totalrow.insert(x, res)
     return totalrow
+
 def sumcol():
     totalcol = []
     for x in range(len(matrix)):
@@ -25,6 +26,7 @@ def sumcol():
             res += matrix[y][x]
         totalcol.insert(x,res)
     return totalcol
+
 def rotate():
     rotatedmat = []
     for x in range(len(matrix)):
@@ -33,8 +35,8 @@ def rotate():
             column.insert(y, matrix[y][x])
         rotatedmat.insert(x,column)
     return rotatedmat
+
 matrix = createmat()
-print(matrix)
 print(sumrow())
 print(sumcol())
 print(rotate())
