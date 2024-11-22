@@ -33,8 +33,8 @@ wordlist = listfiller()
 unique_words = uniquefilter()
 dictionary = dictmaker()
 
-archtxt = open('conteo_palabras.txt', 'w')
+txtfile = open('conteo_palabras.txt', 'w')
 for key in dictionary:
-    archtxt.write(key + ', ' + str(dictionary[key]) + '\n')
-archtxt.close()
-
+    txtfile.write(key + ', ' + str(dictionary[key]) + '\n')
+txtfile.close()
+print("Archivo creado exitosamente")
