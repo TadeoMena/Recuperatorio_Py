@@ -1,4 +1,5 @@
 import random
+import os
 
 def listfiller():
     words = ["Natural","Entero","Racional","Real","Imaginario"]
@@ -31,4 +32,9 @@ def wordcounter(dict):
 wordlist = listfiller()
 unique_words = uniquefilter()
 dictionary = dictmaker()
-print(dictionary)
+
+archtxt = open('conteo_palabras.txt', 'w')
+for key in dictionary:
+    archtxt.write(key + ', ' + str(dictionary[key]) + '\n')
+archtxt.close()
+
